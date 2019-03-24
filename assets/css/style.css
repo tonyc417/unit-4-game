@@ -1,0 +1,15 @@
+/* .winningNumber {
+    background-color: green;
+} */
+
+.winningNumber {
+    font-size: 50px;
+}
+
+.totalScore {
+    font-size: 50px;
+}
+
+.firstGem, .secondGem, .thirdGem, .fourthGem:hover {
+    cursor: pointer;
+}

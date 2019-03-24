@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Gem Guessing Game</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="bg-success">Crystals Collector</h1>
+    </header>
+    <div class="row">
+        <div class="col-2 mt-3 bg-info">
+            <p class="text-left">You will be given a random number at the beginning of this game!
+                There are four crystals below. By clicking on a crytral you will add
+                a specific amount of points to your total score.
+                You win the game by matching your total score to a random numver, you
+                lose the game if your total score goes above the random number.
+                The value of each crystal is hidden from you until you click on it.
+                Each time when the game starts, the game willchange the values of each
+                crystal.
+            </p>
+        </div>
+    </div>
+
+    <div>
+       <span class="winningNumber badge badge-success mt-3 p-4"></span>
+    </div>
+    <div>
+        <p>Wins: </p>
+        <p>Losees: </p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm firstGem">
+                <img src="assets/images/gem.png" width="150px">
+            </div>
+            <div class="col-sm secondGem">
+                <img src="assets/images/gem2.png" width="150px">
+            </div>
+            <div class="col-sm thirdGem">
+                <img src="assets/images/gem3.png" width="150px">
+            </div>
+            <div class="col-sm fourthGem">
+                <img src="assets/images/diamond.png" width="150px">
+            </div>
+        </div>
+    <div>
+        <p>Your total score is:</p>
+        <span class="totalScore badge badge-success mt-3 p-4">0</span>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
