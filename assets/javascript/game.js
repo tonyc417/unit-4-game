@@ -1,7 +1,14 @@
+var randomNumber = Math.floor(Math.random() * 20) + 1;
+var totalNumber = [];
 
-var randomNumber = Math.floor(Math.random() * 10) + 1;
+function sumTotal(total, num) {
+    return total + num;
+}
 
-console.log(randomNumber);
+// console.log(randomNumber);
+console.log(totalNumber);
+
+
 
 $(document).ready(function() {
 
@@ -14,26 +21,33 @@ $(document).ready(function() {
 
     $(".firstGem").on("click", function() {
         var random = Math.floor(Math.random() * 10) + 1;
-        $(".totalScore").text(random);
+        totalNumber.push(random);
+        $(".totalScore").text(totalNumber.reduce(sumTotal));
     });
 
     $(".secondGem").on("click", function() {
         var random = Math.floor(Math.random() * 12) + 1;
-        $(".totalScore").text(random);
+        totalNumber.push(random);
+        $(".totalScore").text(totalNumber.reduce(sumTotal));
     });
 
     $(".thirdGem").on("click", function() {
         var random = Math.floor(Math.random() * 12) + 1;
-        $(".totalScore").text(random);
+        totalNumber.push(random);
+        $(".totalScore").text(totalNumber.reduce(sumTotal));
     });
 
     $(".fourthGem").on("click", function() {
         var random = Math.floor(Math.random() * 12) + 1;
-        $(".totalScore").text(random);
+        totalNumber.push(random);
+        $(".totalScore").text(totalNumber.reduce(sumTotal));
     });
 
-    // if ($(".totalScore") === $(".winningNumber")) {
-    //     alert("you win");
-    // };
+    for (var i = 0; i < totalNumber.length; i++) {
+        alert([i]);
+    }
 
+    // if (randomNumber === totalNumber) {
+    //     alert("you win");
+    // }
 });
