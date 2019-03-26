@@ -1,26 +1,30 @@
 var randomNumber = Math.floor(Math.random() * 102) + 19;
+var win = 1;
+var loss = 1;
+
+
 
 function updateDisplay() {
     var random = Math.floor(Math.random() * 10) + 1;
     var testNumber = parseInt($(".totalScore").text()) + random;
-    
-    $(".totalScore").text(testNumber)
 
+    $(".totalScore").text(testNumber)
     if (randomNumber === testNumber) {
-        alert("you win");
+        $(".wins").html("Wins: " + win++);
+        reset();
         console.log(randomNumber);
     } else if (testNumber > randomNumber) {
-        alert("you lose");
+        $(".losses").text("Losses: " + loss++);
+        reset();
     }
 }
 
-
-// console.log(randomNumber);
+function reset() {
+    $(".totalScore").text("0");
+}
 
 
 $(document).ready(function() {
-
-
 
     $(".text-left").on("click", function() {
         alert("Jquery is working!");
@@ -29,34 +33,8 @@ $(document).ready(function() {
     $(".winningNumber").text(randomNumber);
 
     $(".firstGem").on("click", updateDisplay);
-    // $(".totalScore").text(testNumber);
-    // $(".firstGem").on("click", updateDisplay()) {
-    //     // var random = Math.floor(Math.random() * 10) + 1;
-    //     // var testNumber = parseInt($(".totalScore").text()) + random;
-    // //         if (randomNumber === testNumber) {
-    // //     alert("you win");
-    // //     console.log(randomNumber);
-    // // }
-    //     $(".totalScore").text(testNumber);
-    // };
-
-    $(".secondGem").on("click", function() {
-        var random = Math.floor(Math.random() * 12) + 1;
-        totalNumber.push(random);
-        $(".totalScore").text(totalNumber.reduce(sumTotal));
-    });
-
-    $(".thirdGem").on("click", function() {
-        var random = Math.floor(Math.random() * 12) + 1;
-        totalNumber.push(random);
-        $(".totalScore").text(totalNumber.reduce(sumTotal));
-    });
-
-    $(".fourthGem").on("click", function() {
-        var random = Math.floor(Math.random() * 12) + 1;
-        totalNumber.push(random);
-        $(".totalScore").text(totalNumber.reduce(sumTotal));
-    });
-
+    $(".secondGem").on("click", updateDisplay);
+    $(".thirdGem").on("click", updateDisplay);
+    $(".fourthGem").on("click", updateDisplay);
 
 });

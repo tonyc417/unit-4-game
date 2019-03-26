@@ -1,6 +1,15 @@
-/* .winningNumber {
-    background-color: green;
-} */
+body {
+    background-color: darkgray;
+}
+
+h1 {
+    color: white;
+    font-size: 50px;
+}
+
+.text-left, .scoreBoard, .youWin {
+    color: white;
+}
 
 .winningNumber {
     font-size: 50px;
@@ -10,8 +19,8 @@
     font-size: 50px;
 }
 
-.scoreBoard {
-    background-color: cyan;
+.youWin {
+    font-size: 45px;
 }
 
 .firstGem, .secondGem, .thirdGem, .fourthGem:hover {
