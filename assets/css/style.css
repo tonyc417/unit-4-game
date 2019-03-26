@@ -10,6 +10,10 @@
     font-size: 50px;
 }
 
+.scoreBoard {
+    background-color: cyan;
+}
+
 .firstGem, .secondGem, .thirdGem, .fourthGem:hover {
     cursor: pointer;
 }
