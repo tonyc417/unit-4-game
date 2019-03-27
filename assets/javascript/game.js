@@ -6,14 +6,13 @@ var loss = 1;
 
 function updateDisplay() {
     var random = Math.floor(Math.random() * 10) + 1;
-    var testNumber = parseInt($(".totalScore").text()) + random;
+    var totalNumber = parseInt($(".totalScore").text()) + random;
 
-    $(".totalScore").text(testNumber)
-    if (randomNumber === testNumber) {
+    $(".totalScore").text(totalNumber)
+    if (randomNumber === totalNumber) {
         $(".wins").html("Wins: " + win++);
         reset();
-        console.log(randomNumber);
-    } else if (testNumber > randomNumber) {
+    } else if (totalNumber > randomNumber) {
         $(".losses").text("Losses: " + loss++);
         reset();
     }
@@ -21,14 +20,11 @@ function updateDisplay() {
 
 function reset() {
     $(".totalScore").text("0");
+
 }
 
 
 $(document).ready(function() {
-
-    $(".text-left").on("click", function() {
-        alert("Jquery is working!");
-    });
 
     $(".winningNumber").text(randomNumber);
 
